@@ -1,0 +1,29 @@
+$darker: #090a0f;
+$dark: #1B2735;
+$light: #CFE2F8;
+
+body {
+    height: 100vh;
+    background: linear-gradient($darker, $dark);
+}
+
+#navbar {
+    display: flex;
+    color: $light;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px;
+}
+
+#navbar > ul {
+    display: flex;
+    list-style-type: none;
+    gap: 24px;
+}
+
+#navbar a,
+#navbar a:link,
+#navbar a:visited {
+    text-decoration: none;
+    color: #CFE2F8
+}
