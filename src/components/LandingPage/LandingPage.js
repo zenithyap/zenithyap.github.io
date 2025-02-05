@@ -1,10 +1,10 @@
 import "../../styles.scss";
-import Stars from "./Stars";
+import NightSkyScene from "./NightSkyScene";
 
 function LandingPage() {
     return (
         <section id="landing-page">
-            <Stars></Stars>
+            <NightSkyScene></NightSkyScene>
             <h3>Hello, this is</h3>
             <h1>Zenith Yap</h1>
             <h3>Aspiring web developer</h3>

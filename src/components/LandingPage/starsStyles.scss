@@ -1,7 +1,17 @@
+$shooting-star-size: 6px;
+$shooting-star-glow: #FFB6C1;
+$moon-glow: #ADD8E6;
+
+#night-sky-scene {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
 .diamondStar,
 .star {
     position: absolute;
-    background-color: white;
+    background-color: #FFF;
     animation-name: blinking;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -19,14 +29,90 @@
     clip-path: path("M2.5,0 L2.5,5 L5,5 Q2.5,3.75 2.5,0 M5,5 L2.5,5 L2.5,10 Q2.5,6.25 5,5 M2.5,10 L2.5,5 L0,5 Q2.5,6.25 2.5,10 M0,5 L2.5,5 L2.5,0 Q2.5,3.75 0,5");
 }
 
+.shootingStar {
+    position: absolute;
+    width: $shooting-star-size;
+    height: $shooting-star-size;
+    background-color: #FFF;
+    box-shadow: 0px 0px 20px 5px $shooting-star-glow;
+    border-radius: 50%;
+    animation-name: animate-shooting-star;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    offset-path: path("M-100,-50 0,0");
+    visibility: hidden;
+}
+
+.shootingStar::before {
+    content: "";
+    display: block;
+    width: calc($shooting-star-size * 4);
+    height: calc($shooting-star-size / 3);
+    transform: translateX($shooting-star-size * -3.5) translateY(calc($shooting-star-size / 4));
+    background: linear-gradient(90deg, transparent, #FFF);
+}
+
+.moon-container {
+    position: absolute;
+    top: calc(35vh - 12rem);
+    left: calc(30vw - 10rem);
+}
+
+.moon {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-image: url("./full-moon.svg");
+}
+
+.moon-mask {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    transform: translate(15px, 10px);
+    border-radius: 170px;
+    background-color: #FFF;
+}
+
+.moon-glow {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(15px, 10px);
+    box-shadow: 0px 0px 40px 5px $moon-glow;
+    animation: animate-moon-glow 2s linear infinite;
+}
+
 @keyframes blinking {
     0% {
-        opacity: 0
+        opacity: 0;
     }
     50% {
-        opacity: 1
+        opacity: 1;
     }
     100% {
-        opacity: 0
+        opacity: 0;
+    }
+}
+
+@keyframes animate-shooting-star {
+    0% {
+        visibility: visible;
+        opacity: 0;
+        offset-distance: 0%;
+    }
+    20% {
+        opacity: 1;
+    }
+    40%, 100% {
+        opacity: 0;
+        offset-distance: 100%;
+    }
+}
+
+@keyframes animate-moon-glow {
+    50% {
+        opacity: 0.5;
     }
 }
