@@ -1,6 +1,4 @@
-$darker: #090a0f;
-$dark: #1B2735;
-$light: #CFE2F8;
+@use "theme" as *;
 $default-gap: 24px;
 $section-gap: 48px;
 
@@ -24,6 +22,11 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
+}
+
+@mixin section-header {
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    padding: $section-gap;
 }
 
 #navbar {
@@ -100,4 +103,15 @@ h1, h2, h3, h4, h5, h6 {
     #about-page .introduction-container {
         flex-direction: column;
     }
+}
+
+#skills {
+    background-color: $dark;
+    text-align: center;
+    padding: 0px $section-gap $section-gap $section-gap;
+}
+
+#skills h1 {
+    @include section-header();
+    color: $light;
 }

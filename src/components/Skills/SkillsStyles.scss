@@ -1,0 +1,81 @@
+@use "../../theme";
+
+$panel-size: 50px;
+$planet-hover-distance: 3px;
+
+.scene {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    perspective: 500px;
+    perspective-origin: 50% 20%;
+    transform-style: preserve-3d;
+}
+
+@media screen and (max-width: 700px) {
+    .scene {
+        transform: scale(0.7);
+    }
+}
+
+.scene img {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    animation: animate-planet-hover 2s linear infinite;
+}
+
+.banner {
+    display: flex;
+    transform-style: preserve-3d;
+    animation: animate-rotate 10s linear infinite;
+}
+
+.panel {
+    position: absolute;
+    width: $panel-size;
+    height: $panel-size;
+    overflow: hidden;
+    transform: translate(-50%, -100%) rotateY(var(--rotate)) translateZ(189px);
+
+    &::before {
+        color: theme.$light;
+        position: absolute;
+        content: "HTML CSS JavaScript React Python Git GitHub Tailwind";
+        word-spacing: 30px;
+        font-size: 40px;
+        width: max-content;
+        left: var(--left);
+    }
+}
+
+@for $i from 0 to 24 {
+    .panel:nth-child(#{$i + 1}) {
+        --left: #{$i * -1 * $panel-size};
+        --rotate: #{$i / 24 * 360deg};
+    }
+}
+
+@keyframes animate-rotate {
+    100% {
+        transform: rotateY(-360deg);
+    }
+}
+
+@keyframes animate-planet-hover {
+    25%{
+        transform: translateY($planet-hover-distance * -1);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    75% {
+        transform: translateY($planet-hover-distance);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
