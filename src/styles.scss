@@ -1,12 +1,29 @@
 $darker: #090a0f;
 $dark: #1B2735;
 $light: #CFE2F8;
-$default-space: 24px;
+$default-gap: 24px;
+$section-gap: 48px;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
 }
 
 #navbar {
@@ -16,13 +33,13 @@ $default-space: 24px;
     color: $light;
     align-items: center;
     justify-content: space-around;
-    padding: $default-space;
+    padding: $default-gap;
 }
 
 #navbar>ul {
     display: flex;
     list-style-type: none;
-    gap: $default-space;
+    gap: $default-gap;
 }
 
 #navbar a,
@@ -37,7 +54,7 @@ $default-space: 24px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: $default-space;
+    gap: $default-gap;
     color: $light;
     height: 100vh;
     background: linear-gradient($darker, $dark);
@@ -45,4 +62,42 @@ $default-space: 24px;
 
 #landing-page h1 {
     font-size: 64px;
+}
+
+#about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $light;
+
+}
+
+#about-page h1 {
+    color: $dark;
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    padding: $section-gap;
+}
+
+#about-page .introduction-container {
+    display: flex;
+    padding: 0px $section-gap $section-gap $section-gap;
+    justify-content: space-between;
+    align-items: center;
+    gap: $section-gap;
+}
+
+#about-page img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+#about-page p {
+    max-inline-size: 40ch;
+}
+
+@media screen and (max-width: 700px) {
+    #about-page .introduction-container {
+        flex-direction: column;
+    }
 }
