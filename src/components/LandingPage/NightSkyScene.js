@@ -11,7 +11,6 @@ const animationMin = 1;
 
 const shootingStars = [];
 const numShootingStars = (winHeight * winWidth) / 110000;
-console.log(numStars, numShootingStars);
 const shootingStarDelayMax = 10;
 const shootingStarDelayMin = 1;
 
