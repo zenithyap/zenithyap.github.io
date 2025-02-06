@@ -1,8 +1,8 @@
 import "./starsStyles.scss";
 
-const margin = 10;
-const winHeight = document.documentElement.clientHeight - margin;
-const winWidth = document.documentElement.clientWidth - margin;
+const margin = 20;
+const winHeight = window.innerHeight - margin;
+const winWidth = window.innerWidth - margin;
 
 const stars = [];
 const numStars = winHeight * winWidth / 20000;

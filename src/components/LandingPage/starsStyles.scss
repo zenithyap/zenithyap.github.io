@@ -21,7 +21,7 @@ $moon-glow: #ADD8E6;
 }
 
 #night-sky-scene {
-    @include size(100vw, 100vh);
+    @include size(100%, 100vh);
     position: absolute;
 }
 
