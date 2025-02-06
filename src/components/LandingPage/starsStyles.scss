@@ -2,84 +2,80 @@ $shooting-star-size: 6px;
 $shooting-star-glow: #FFB6C1;
 $moon-glow: #ADD8E6;
 
+@mixin star-animation($animation-name) {
+    position: absolute;
+    background-color: #FFF;
+    animation: $animation-name linear infinite;
+    border-radius: 50%;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin absolute-positioning($left, $top) {
+    position: absolute;
+    left: $left;
+    top: $top;
+}
+
 #night-sky-scene {
-    height: 100vh;
-    width: 100vw;
+    @include size(100vw, 100vh);
     position: absolute;
 }
 
 .diamondStar,
 .star {
-    position: absolute;
-    background-color: #FFF;
-    animation-name: blinking;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    @include star-animation("blinking");
 }
 
 .star {
-    height: 2px;
-    width: 2px;
-    border-radius: 50%;
+    @include size(2px, 2px);
 }
 
 .diamondStar {
-    height: 10px;
-    width: 5px;
+    @include size(5px, 10px);
     clip-path: path("M2.5,0 L2.5,5 L5,5 Q2.5,3.75 2.5,0 M5,5 L2.5,5 L2.5,10 Q2.5,6.25 5,5 M2.5,10 L2.5,5 L0,5 Q2.5,6.25 2.5,10 M0,5 L2.5,5 L2.5,0 Q2.5,3.75 0,5");
 }
 
 .shootingStar {
-    position: absolute;
-    width: $shooting-star-size;
-    height: $shooting-star-size;
-    background-color: #FFF;
+    @include star-animation("animate-shooting-star");
+    @include size($shooting-star-size, $shooting-star-size);
     box-shadow: 0px 0px 20px 5px $shooting-star-glow;
-    border-radius: 50%;
-    animation-name: animate-shooting-star;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
     offset-path: path("M-100,-50 0,0");
     visibility: hidden;
-}
-
-.shootingStar::before {
-    content: "";
-    display: block;
-    width: calc($shooting-star-size * 4);
-    height: calc($shooting-star-size / 3);
-    transform: translateX($shooting-star-size * -3.5) translateY(calc($shooting-star-size / 4));
-    background: linear-gradient(90deg, transparent, #FFF);
+    
+    &::before {
+        @include size(calc($shooting-star-size * 4), calc($shooting-star-size / 3));
+        content: "";
+        display: block;
+        transform: translateX($shooting-star-size * -3.5) translateY(calc($shooting-star-size / 4));
+        background: linear-gradient(90deg, transparent, #FFF);
+    }
 }
 
 .moon-container {
-    position: absolute;
-    top: calc(35vh - 12rem);
-    left: calc(30vw - 10rem);
+    @include absolute-positioning(calc(30vw - 10rem), calc(35vh - 12rem))
 }
 
 .moon {
-    width: 200px;
-    height: 200px;
+    @include size(200px, 200px);
     position: absolute;
     background-image: url("./full-moon.svg");
 }
 
 .moon-mask {
-    position: absolute;
-    width: 170px;
-    height: 170px;
-    transform: translate(15px, 10px);
+    @include size(170px, 170px);
+    @include absolute-positioning(15px, 10px);
     border-radius: 170px;
     background-color: #FFF;
 }
 
 .moon-glow {
-    width: 170px;
-    height: 170px;
+    @include size(170px, 170px);
+    @include absolute-positioning(15px, 10px);
     border-radius: 50%;
-    position: absolute;
-    transform: translate(15px, 10px);
     box-shadow: 0px 0px 40px 5px $moon-glow;
     animation: animate-moon-glow 2s linear infinite;
 }
