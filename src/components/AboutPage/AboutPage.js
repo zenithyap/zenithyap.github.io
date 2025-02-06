@@ -1,5 +1,5 @@
 import "../../styles.scss";
-import profilePic from "./profilePic.png";
+import profilePic from "./profilePic.JPEG";
 
 function AboutPage() {
     return (
