@@ -1,18 +1,19 @@
 import "./starsStyles.scss";
 
+const margin = 10;
+const winHeight = document.documentElement.clientHeight - margin;
+const winWidth = document.documentElement.clientWidth - margin;
+
 const stars = [];
-const numStars = 100;
+const numStars = winHeight * winWidth / 20000;
 const animationMax = 3;
 const animationMin = 1;
 
 const shootingStars = [];
-const numShootingStars = 10;
+const numShootingStars = (winHeight * winWidth) / 110000;
+console.log(numStars, numShootingStars);
 const shootingStarDelayMax = 10;
 const shootingStarDelayMin = 1;
-
-const margin = 10;
-const winHeight = document.documentElement.clientHeight - margin;
-const winWidth = document.documentElement.clientWidth - margin;
 
 function getRandom(min, max) {
     return (Math.random() * (max - min)) + min;
