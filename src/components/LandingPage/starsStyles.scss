@@ -27,7 +27,7 @@ $moon-glow: #ADD8E6;
 
 .diamondStar,
 .star {
-    @include star-animation("blinking");
+    @include star-animation(blinking);
 }
 
 .star {
@@ -40,7 +40,7 @@ $moon-glow: #ADD8E6;
 }
 
 .shootingStar {
-    @include star-animation("animate-shooting-star");
+    @include star-animation(animate-shooting-star);
     @include size($shooting-star-size, $shooting-star-size);
     box-shadow: 0px 0px 20px 5px $shooting-star-glow;
     offset-path: path("M-100,-50 0,0");
