@@ -1,4 +1,4 @@
-import "./starsStyles.scss";
+import "./nightSkyStyles.scss";
 
 const margin = 20;
 const winHeight = window.innerHeight - margin;

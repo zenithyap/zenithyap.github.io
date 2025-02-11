@@ -1,3 +1,5 @@
+@use "../../global.scss" as *;
+
 $shooting-star-size: 6px;
 $shooting-star-glow: #FFB6C1;
 $moon-glow: #ADD8E6;
@@ -7,17 +9,6 @@ $moon-glow: #ADD8E6;
     background-color: #FFF;
     animation: $animation-name linear infinite;
     border-radius: 50%;
-}
-
-@mixin size($width, $height) {
-    width: $width;
-    height: $height;
-}
-
-@mixin absolute-positioning($left, $top) {
-    position: absolute;
-    left: $left;
-    top: $top;
 }
 
 #night-sky-scene {

@@ -1,0 +1,14 @@
+$darker: #090a0f;
+$dark: #1B2735;
+$light: #CFE2F8;
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin absolute-positioning($left, $top) {
+    position: absolute;
+    left: $left;
+    top: $top;
+}

@@ -1,4 +1,4 @@
-@use "../../theme";
+@use "../../global";
 
 $panel-size: 50px;
 $planet-hover-distance: 3px;
@@ -42,7 +42,7 @@ $planet-hover-distance: 3px;
     transform: translate(-50%, -100%) rotateY(var(--rotate)) translateZ(189px);
 
     &::before {
-        color: theme.$light;
+        color: global.$light;
         position: absolute;
         content: "HTML CSS JavaScript React Python Git GitHub Tailwind";
         word-spacing: 26px;

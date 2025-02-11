@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage/LandingPage";
-import AboutPage from "./components/AboutPage/AboutPage";
+import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div>
       <Navbar></Navbar>
       <LandingPage></LandingPage>
-      <AboutPage></AboutPage>
+      <About></About>
       <Skills></Skills>
     </div>
   );

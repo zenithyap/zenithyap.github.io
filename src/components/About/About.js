@@ -3,7 +3,7 @@ import profilePic from "./profilePic.JPEG";
 
 function AboutPage() {
     return (
-        <section id="about-page">
+        <section id="about">
             <h1>About</h1>
             <div className="introduction-container">
                 <img src={profilePic} alt="My Profile" />
