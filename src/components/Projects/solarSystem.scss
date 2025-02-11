@@ -1,0 +1,57 @@
+@use "../../global" as *;
+
+$sun-light: #FC9601;
+$sun-dark: #DA663A;
+
+.sun-container {
+    --sun-height: 2000px;
+    --sun-width: 2000px;
+    display: flex;
+    justify-content: center;
+    background-color: $dark;
+    width: 100%;
+    height: calc(var(--sun-height) / 10);
+}
+
+#sun {
+    @include size(var(--sun-width), var(--sun-height));
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(calc(var(--sun-height) / -1.1));
+    clip-path: inset(calc(var(--sun-height) / 1.1) -200px -200px -200px);
+    background: linear-gradient($sun-light 90%, $sun-dark);
+
+    &::before {
+        content: "";
+        display: block;
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        box-shadow: 0px 0px 100px 30px #D14009;
+        animation: animate-sun-glow 2s linear infinite;
+    }
+    
+    &::after {  
+        content: "";
+        display: block;
+        position: absolute;
+        color: $light;
+        font-size: clamp(1.5rem, 2vw, 3rem);
+        bottom: calc(var(--sun-height) / 10);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #sun {
+        --sun-height: 1000px;
+        --sun-width: 1000px;
+    }
+}
+
+@keyframes animate-sun-glow {
+    40% {
+        opacity: 0.7;
+    }
+}

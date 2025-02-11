@@ -10,8 +10,8 @@ function App() {
       <Navbar></Navbar>
       <LandingPage></LandingPage>
       <About></About>
-      <Skills></Skills>
       <Projects></Projects>
+      <Skills></Skills>
     </div>
   );
 }
