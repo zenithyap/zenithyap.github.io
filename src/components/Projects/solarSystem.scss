@@ -3,51 +3,59 @@
 $sun-light: #FC9601;
 $sun-dark: #DA663A;
 
-.sun-container {
-    --sun-height: 2000px;
-    --sun-width: 2000px;
-    display: flex;
-    justify-content: center;
-    background-color: $dark;
-    width: 100%;
-    height: calc(var(--sun-height) / 10);
-}
-
 #sun {
-    @include size(var(--sun-width), var(--sun-height));
+    width: 100%;
+    aspect-ratio: 1;
     position: absolute;
-    display: flex;
-    justify-content: center;
     border-radius: 50%;
-    transform: translateY(calc(var(--sun-height) / -1.1));
-    clip-path: inset(calc(var(--sun-height) / 1.1) -200px -200px -200px);
+    transform: translateY(-90%);
     background: linear-gradient($sun-light 90%, $sun-dark);
 
     &::before {
         content: "";
         display: block;
-        width: inherit;
-        height: inherit;
+        aspect-ratio: 1;
         border-radius: inherit;
         box-shadow: 0px 0px 100px 30px #D14009;
         animation: animate-sun-glow 2s linear infinite;
     }
-    
-    &::after {  
-        content: "";
-        display: block;
-        position: absolute;
-        color: $light;
-        font-size: clamp(1.5rem, 2vw, 3rem);
-        bottom: calc(var(--sun-height) / 10);
+}
+
+.planets-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-auto-flow: dense;
+    justify-items: center;
+    align-items: center;
+    margin-top: 10%;
+    padding: 48px;
+}
+
+@mixin planet($url) {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    border-radius: 50%;
+    background-image: url($url);
+    background-size: cover;
+    grid-column: 2;
+    margin: 12px;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.1s linear;
+        cursor: pointer;
     }
 }
 
-@media screen and (max-width: 700px) {
-    #sun {
-        --sun-height: 1000px;
-        --sun-width: 1000px;
-    }
+#mercury {
+    @include size(200px, 200px);
+    @include planet("./imgs/mercury.png")
+}
+
+#venus {
+    @include size(300px, 300px);
+    @include planet("./imgs/venus.png");
 }
 
 @keyframes animate-sun-glow {

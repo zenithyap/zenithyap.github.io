@@ -1,0 +1,104 @@
+@use "../../../global" as *;
+
+.animated-box {
+    display: flex;
+    position: relative;
+    width: fit-content;
+    padding: 12px;
+    color: $light;
+}
+
+.animated-box p {
+    max-width: 66ch;
+    flex: 1;
+}
+
+.animated-box .border-top,
+.animated-box .border-right,
+.animated-box .border-bottom,
+.animated-box .border-left {
+    position: absolute;
+    background-color: $light;
+    box-shadow: 0 0 3px $light;
+}
+
+.animated-box .border-top {
+    left: 0;
+    top: 0;
+    height: 2px;
+    width: 0%;
+    transition: width 0.2s 0.6s linear;
+}
+
+.animated-box .border-bottom {
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    transition: width 0.2s 0.2s linear;
+}
+
+.animated-box .border-left {
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 0%;
+    transition: height 0.2s linear;
+}
+
+.animated-box .border-right {
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 0%;
+    transition: height 0.2s 0.4s linear;
+}
+
+.animated-box.animate .border-top,
+.animated-box.animate .border-bottom {
+    width: 100%;
+}
+
+.animated-box.animate .border-top {
+    transition: width 0.2s linear;
+}
+
+.animated-box.animate .border-bottom {
+    transition: width 0.2s 0.4s linear;
+}
+
+.animated-box.animate .border-right,
+.animated-box.animate .border-left {
+    height: 100%;
+}
+
+.animated-box.animate .border-right {
+    transition: height 0.2s 0.2s linear;
+}
+
+.animated-box.animate .border-left {
+    transition: height 0.2s 0.6s linear;
+}
+
+.animated-box p {
+    opacity: 0;
+    transition: opacity 0.5s 0.8s linear;
+}
+
+.animated-box.animate p {
+    opacity: 1;
+}
+
+.animated-box p::first-line {
+    font-size: 24px;
+    text-shadow: $light 0 0 3px;
+    font-weight: bold;
+}
+
+.animated-box a:visited,
+.animated-box a:link {
+    color: $light;
+    text-shadow: $light 0 0 3px;
+    text-decoration: none;
+    font-weight: bold;
+}

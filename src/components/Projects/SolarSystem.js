@@ -1,10 +1,35 @@
+import { useState } from "react";
+
 import "./solarSystem.scss";
+import AnimatedBox from "./animatedBox/AnimatedBox";
 
 function SolarSystem() {
+    const [planetDesc, setPlanetDesc] = useState({
+        mercury: false,
+        venus: false,
+    });
+
+    function handlePlanetClick(planet) {
+        setPlanetDesc(prev => ({
+            ...prev,
+            [planet]: !prev[planet]
+        }));
+    };
+    
+    const pixDesc = "A command-line task manager done as a school project. It can mark/unmark, add/delete, and find tasks by keyword.";
+    const myLibDesc = "Bookmark application done as a school project in a team of five. My role was designing and implementing the front end design. The app is able to support books that currently being read, finished books as well as books to read."
+
     return (
         <div id="solar-system">
-            <div className="sun-container">
-                <div id="sun"></div>
+            <div id="sun"></div>
+            <div className="planets-container">
+                <div className="blank"></div>
+                <div id="mercury" onClick={() => handlePlanetClick("mercury")}></div>
+                <AnimatedBox title="Pix" link="https://github.com/zenithyap/ip" isDisplay={planetDesc.mercury} desc={pixDesc}></AnimatedBox>
+
+                <div id="venus" onClick={() => handlePlanetClick("venus")}></div>
+                <AnimatedBox title="MyLib" link="https://github.com/zenithyap/tp" isDisplay={planetDesc.venus} desc={myLibDesc}></AnimatedBox>
+                <div className="blank"></div>
             </div>
         </div>
     )
