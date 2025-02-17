@@ -3,14 +3,20 @@
 .animated-box {
     display: flex;
     position: relative;
-    width: fit-content;
     padding: 12px;
     color: $light;
+    width: 0;
+    height: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .animated-box {
+        grid-column: 1;
+    }
 }
 
 .animated-box p {
     max-width: 66ch;
-    flex: 1;
 }
 
 .animated-box .border-top,
@@ -54,39 +60,9 @@
     transition: height 0.2s 0.4s linear;
 }
 
-.animated-box.animate .border-top,
-.animated-box.animate .border-bottom {
-    width: 100%;
-}
-
-.animated-box.animate .border-top {
-    transition: width 0.2s linear;
-}
-
-.animated-box.animate .border-bottom {
-    transition: width 0.2s 0.4s linear;
-}
-
-.animated-box.animate .border-right,
-.animated-box.animate .border-left {
-    height: 100%;
-}
-
-.animated-box.animate .border-right {
-    transition: height 0.2s 0.2s linear;
-}
-
-.animated-box.animate .border-left {
-    transition: height 0.2s 0.6s linear;
-}
-
 .animated-box p {
     opacity: 0;
     transition: opacity 0.5s 0.8s linear;
-}
-
-.animated-box.animate p {
-    opacity: 1;
 }
 
 .animated-box p::first-line {
@@ -101,4 +77,36 @@
     text-shadow: $light 0 0 3px;
     text-decoration: none;
     font-weight: bold;
+}
+
+.animated-box.animate {
+    .border-top,
+    .border-bottom {
+        width: 100%;
+    }
+    
+    .border-right,
+    .border-left {
+        height: 100%;
+    }
+
+    .border-top {
+        transition: width 0.2s linear;
+    }
+
+    .border-bottom {
+        transition: width 0.2s 0.4s linear;
+    }
+
+    .border-right {
+        transition: height 0.2s 0.2s linear;
+    }
+
+    .border-left {
+        transition: height 0.2s 0.6s linear;
+    }
+
+    p {
+        opacity: 1;
+    }
 }
