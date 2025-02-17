@@ -21,10 +21,17 @@ $sun-dark: #DA663A;
     }
 }
 
+@keyframes animate-sun-glow {
+    40% {
+        opacity: 0.7;
+    }
+}
+
 .planets-container {
     --grid-col: 2;
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
+    row-gap: 100px;
     grid-auto-flow: dense;
     justify-items: center;
     align-items: center;
@@ -40,7 +47,8 @@ $sun-dark: #DA663A;
     background-image: url($url);
     background-size: cover;
     grid-column: var(--grid-col);
-    margin: 12px;
+    margin: 0px 24px;
+    box-shadow: 0px -20px 30px #1a1a1a inset;
 
     &:hover {
         transform: scale(1.1);
@@ -53,21 +61,40 @@ $sun-dark: #DA663A;
     .planets-container {
         --grid-col: 1;
         grid-template-columns: 1fr;
+        row-gap: 0px;
+        margin-top: 20%;
+    }
+
+    .planet {
+        scale: 0.6;
+    }
+
+    #sun {
+        width: 200%;
     }
 }
 
 #mercury {
-    @include size(200px, 200px);
+    @include size(100px, 100px);
     @include planet("./imgs/mercury.png")
 }
 
 #venus {
-    @include size(300px, 300px);
+    @include size(200px, 200px);
     @include planet("./imgs/venus.png");
 }
 
-@keyframes animate-sun-glow {
-    40% {
-        opacity: 0.7;
-    }
+#earth {
+    @include size(210px, 210px);
+    @include planet("./imgs/earth.png");
+}
+
+#mars {
+    @include size(140px, 140px);
+    @include planet("./imgs/mars.png");
+}
+
+#jupiter {
+    @include size(250px, 250px);
+    @include planet("./imgs/jupiter.png");
 }

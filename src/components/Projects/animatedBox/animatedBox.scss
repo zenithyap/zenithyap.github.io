@@ -2,16 +2,19 @@
 
 .animated-box {
     display: flex;
+    width: fit-content;
+    height: auto;
     position: relative;
     padding: 12px;
     color: $light;
-    width: 0;
-    height: 0;
 }
 
 @media screen and (max-width: 700px) {
     .animated-box {
         grid-column: 1;
+        width: 0;
+        height: 0;
+        visibility: hidden;
     }
 }
 
@@ -80,6 +83,10 @@
 }
 
 .animated-box.animate {
+    visibility: visible;
+    width: fit-content;
+    height: auto;
+
     .border-top,
     .border-bottom {
         width: 100%;
