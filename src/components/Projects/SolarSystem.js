@@ -21,16 +21,6 @@ function SolarSystem() {
                 [planet]: !prev[planet]
             }
 
-            // if (updatedPlanetDesc[planet] === true) {
-            //     animatedBox.style.width = "fit-content";
-            //     animatedBox.style.height = "auto";
-            // } else {
-            //     setTimeout(() => {  
-            //         animatedBox.style.width = 0;
-            //         animatedBox.style.height = 0;
-            //     }, 1250);
-            // }
-
             return updatedPlanetDesc;
         });
     };
@@ -44,7 +34,10 @@ function SolarSystem() {
     return (
         <div id="solar-system">
             <div id="sun"></div>
+            <h1>Projects</h1>
+            <p>Click the planets to find out more!</p>
             <div className="planets-container">
+
                 <div className="blank"></div>
                 <div className="planet" id="mercury" onClick={() => handlePlanetClick("mercury")}></div>
                 <AnimatedBox title="Design Portfolio" link="https://soarz.netlify.app" isDisplay={planetDesc.mercury} desc={designPortfolioDesc}></AnimatedBox>
