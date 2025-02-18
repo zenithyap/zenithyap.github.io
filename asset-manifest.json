@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.a2f576f7.css",
-    "main.js": "/my-portfolio/static/js/main.96dd1dc2.js",
+    "main.css": "/my-portfolio/static/css/main.1be17b74.css",
+    "main.js": "/my-portfolio/static/js/main.65089506.js",
     "static/js/488.21a3b654.chunk.js": "/my-portfolio/static/js/488.21a3b654.chunk.js",
     "static/media/planet.png": "/my-portfolio/static/media/planet.b300289825231e294319.png",
     "static/media/earth.png": "/my-portfolio/static/media/earth.88283fd478b13fa920f1.png",
@@ -11,13 +11,14 @@
     "static/media/profilePic.JPEG": "/my-portfolio/static/media/profilePic.1b8e34edccdccf9d7834.JPEG",
     "static/media/mercury.png": "/my-portfolio/static/media/mercury.5fc675fbac8d67ba4cc8.png",
     "static/media/full-moon.svg": "/my-portfolio/static/media/full-moon.2bfca8cb3e22472f4afe.svg",
+    "static/media/Nasalization-Regular.woff": "/my-portfolio/static/media/Nasalization-Regular.e58419de2cb1706a54bf.woff",
     "index.html": "/my-portfolio/index.html",
-    "main.a2f576f7.css.map": "/my-portfolio/static/css/main.a2f576f7.css.map",
-    "main.96dd1dc2.js.map": "/my-portfolio/static/js/main.96dd1dc2.js.map",
+    "main.1be17b74.css.map": "/my-portfolio/static/css/main.1be17b74.css.map",
+    "main.65089506.js.map": "/my-portfolio/static/js/main.65089506.js.map",
     "488.21a3b654.chunk.js.map": "/my-portfolio/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2f576f7.css",
-    "static/js/main.96dd1dc2.js"
+    "static/css/main.1be17b74.css",
+    "static/js/main.65089506.js"
   ]
 }
