@@ -31,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #navbar {
     width: 100%;
+    height: 70px;
     display: flex;
     color: $light;
     align-items: center;
@@ -59,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: $default-gap;
     color: $light;
-    height: 100vh;
+    height: calc(100vh - 70px);
     background: linear-gradient($darker, $dark);
 }
 
