@@ -5,12 +5,12 @@ const winHeight = window.innerHeight - margin;
 const winWidth = window.innerWidth - margin;
 
 const stars = [];
-const numStars = winHeight * winWidth / 20000;
+const numStars = Math.max(winHeight * winWidth / 20000, 30);
 const animationMax = 3;
 const animationMin = 1;
 
 const shootingStars = [];
-const numShootingStars = (winHeight * winWidth) / 110000;
+const numShootingStars = Math.min(Math.max((winHeight * winWidth) / 110000, 7), 15);
 const shootingStarDelayMax = 10;
 const shootingStarDelayMin = 1;
 
