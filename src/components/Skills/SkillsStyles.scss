@@ -2,6 +2,7 @@
 
 $panel-size: 50px;
 $planet-hover-distance: 3px;
+$panel-num: 28;
 
 .scene {
     display: flex;
@@ -39,23 +40,23 @@ $planet-hover-distance: 3px;
     width: $panel-size;
     height: $panel-size;
     overflow: hidden;
-    transform: translate(-50%, -100%) rotateY(var(--rotate)) translateZ(189px);
+    transform: translate(-50%, -100%) rotateY(var(--rotate)) translateZ(221px);
 
     &::before {
         color: global.$light;
         position: absolute;
         content: "HTML CSS JavaScript React Python Git GitHub Tailwind";
-        word-spacing: 26px;
+        word-spacing: 30px;
         font-size: 40px;
         width: max-content;
         left: var(--left);
     }
 }
 
-@for $i from 0 to 24 {
+@for $i from 0 to $panel-num {
     .panel:nth-child(#{$i + 1}) {
         --left: #{$i * -1 * $panel-size};
-        --rotate: #{$i / 24 * 360deg};
+        --rotate: #{$i / $panel-num * 360deg};
     }
 }
 

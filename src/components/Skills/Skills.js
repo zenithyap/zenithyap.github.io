@@ -32,6 +32,10 @@ function Skills() {
                     <div className="panel"></div>
                     <div className="panel"></div>
                     <div className="panel"></div>
+                    <div className="panel"></div>
+                    <div className="panel"></div>
+                    <div className="panel"></div>
+                    <div className="panel"></div>
                 </div>
             </div>
         </div>
