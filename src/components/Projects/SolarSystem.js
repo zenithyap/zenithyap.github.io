@@ -13,8 +13,6 @@ function SolarSystem() {
     });
 
     function handlePlanetClick(planet) {
-        const animatedBox = document.querySelector(`#${planet} + .animated-box`);
-        console.log(animatedBox);
         setPlanetDesc(prev => {
             const updatedPlanetDesc = {
                 ...prev,
