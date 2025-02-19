@@ -70,14 +70,14 @@
 
 .animated-box p::first-line {
     font-size: 24px;
-    text-shadow: $light 0 0 3px;
+    text-shadow: $light 0 0 2px;
     font-weight: bold;
 }
 
 .animated-box a:visited,
 .animated-box a:link {
     color: $light;
-    text-shadow: $light 0 0 3px;
+    text-shadow: $light 0 0 2px;
     text-decoration: none;
     font-weight: bold;
 }
