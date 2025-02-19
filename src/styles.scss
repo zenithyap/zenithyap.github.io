@@ -16,8 +16,13 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
 
-p {
+p, li {
     text-wrap: pretty;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+h3 {
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @mixin section-header {
-    font-size: clamp(1.5rem, 2vw, 3rem);
+    font-size: clamp(1.5rem, 4vw, 2rem);
     padding: $section-gap;
 }
 
@@ -98,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #landing-page h1 {
-    font-size: 64px;
+    font-size: clamp(3rem, 7vw, 4rem);
 }
 
 #about {
@@ -109,9 +114,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #about h1 {
+    @include section-header;
     color: $dark;
-    font-size: clamp(1.5rem, 2vw, 3rem);
-    padding: $section-gap;
 }
 
 #about .introduction-container {
@@ -146,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #skills h1 {
-    @include section-header();
+    @include section-header;
     color: $light;
 }
 

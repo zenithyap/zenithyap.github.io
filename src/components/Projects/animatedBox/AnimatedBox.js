@@ -7,7 +7,10 @@ function AnimatedBox({ isDisplay, desc, link, title }) {
             <div className="border-right"></div>
             <div className="border-bottom"></div>
             <div className="border-left"></div>
-            <p>{title}<br/><br/>{desc}<br/><br/>Click <a href={link} target="_blank" rel="noopener noreferrer">here</a> to find out more!</p>
+            <div className="desc-container">
+                <h3>{title}</h3>
+                <p><br/>{desc}<br/><br/>Click <a href={link} target="_blank" rel="noopener noreferrer">here</a> to find out more!</p>
+            </div>
         </div>
     )
 }
