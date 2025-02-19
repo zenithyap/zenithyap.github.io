@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     color: $light;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
     padding: $default-gap;
 }
 
@@ -50,6 +50,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     list-style-type: none;
     gap: $default-gap;
+    margin-right: 10rem;
 }
 
 #navbar a,
@@ -61,6 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #navbar #hamburger {
     display: none;
+    margin-right: 3rem;
 }
 
 @media screen and (max-width: 700px) {

@@ -10,7 +10,6 @@ function Navbar() {
 
     return (
         <div id="navbar">
-            <div>Zenith</div>
             <div id="menu">
                 <div id="hamburger" onClick={handleHamburgerClick}>&#9776;</div>
                 <ul className={ showNavbar ? "display" : "" }>
