@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage/LandingPage";
 import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 
 function App() {
@@ -11,7 +10,6 @@ function App() {
       <LandingPage></LandingPage>
       <About></About>
       <Projects></Projects>
-      <Skills></Skills>
     </div>
   );
 }

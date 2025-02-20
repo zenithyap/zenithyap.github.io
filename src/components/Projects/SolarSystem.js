@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import "./solarSystem.scss";
 import AnimatedBox from "./animatedBox/AnimatedBox";
+import Skills from "./Skills/Skills";
 
 function SolarSystem() {
     const [planetDesc, setPlanetDesc] = useState({
@@ -55,6 +56,10 @@ function SolarSystem() {
                 <div className="blank"></div>
                 <div className="planet" id="jupiter" onClick={() => handlePlanetClick("jupiter")}></div>
                 <AnimatedBox title="Robot Dog" link="https://www.ccsgp.comp.nus.edu.sg/robotic-dog-intern" isDisplay={planetDesc.jupiter} desc={robotDogDesc}></AnimatedBox>
+
+                <div className="blank"></div>
+                <Skills></Skills>
+                <div className="blank"></div>
             </div>
         </div>
     )

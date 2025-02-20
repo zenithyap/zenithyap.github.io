@@ -57,9 +57,6 @@ $sun-dark: #DA663A;
 }
 
 @mixin planet($url) {
-    display: flex;
-    position: relative;
-    justify-content: center;
     border-radius: 50%;
     background-image: url($url);
     background-size: cover;

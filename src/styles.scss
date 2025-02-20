@@ -145,17 +145,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-#skills {
-    background-color: $dark;
-    text-align: center;
-    padding: 0px $section-gap $section-gap $section-gap;
-}
-
-#skills h1 {
-    @include section-header;
-    color: $light;
-}
-
 #projects {
     background-color: $dark;
 }
