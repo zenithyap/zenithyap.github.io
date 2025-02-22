@@ -1,5 +1,4 @@
 import "./skillsStyles.scss";
-import saturn from "./saturn.png";
 
 function Skills() {
     return (
