@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     color: $light;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     padding: $default-gap;
 }
 
@@ -54,7 +54,6 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     list-style-type: none;
     gap: $default-gap;
-    margin-right: 10rem;
 }
 
 #navbar a,
@@ -62,39 +61,6 @@ h1, h2, h3, h4, h5, h6 {
 #navbar a:visited {
     text-decoration: none;
     color: #CFE2F8
-}
-
-#navbar #hamburger {
-    display: none;
-    margin-right: 3rem;
-}
-
-@media screen and (max-width: 700px) {
-    #navbar #hamburger {
-        font-size: 30px;
-    }
-    
-    #navbar ul {
-        display: none;
-        position: absolute;
-    }
-    
-    #navbar .display,
-    #navbar #hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: $default-gap;
-    }
-
-    #navbar .display {
-        transform-origin: top;
-        animation: animate-dropdown 0.2s linear forwards;
-    }
-
-    @keyframes animate-dropdown {
-        from {transform: scaleY(0); }
-        to { transform: scaleY(1); }
-    }
 }
 
 #landing-page {
