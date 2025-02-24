@@ -158,16 +158,30 @@ h1, h2, h3, h4, h5, h6 {
     gap: 24px;
 }
 
-@media screen and (max-width: 700px) {
-    #about .introduction-container {
-        flex-direction: column;
-    }
-}
-
 #projects {
     background-color: $dark;
 }
 
 #footer {
     background-color: $dark;
+    display: flex;
+    justify-content: center;
+    gap: $section-gap;
+    padding: $section-gap $section-gap $default-gap $section-gap;
+}
+
+#footer svg {
+    background-color: $dark;
+    @include size(40px, 40px);
+    fill: $light;
+}
+
+@media screen and (max-width: 700px) {
+    #about .introduction-container {
+        flex-direction: column;
+    }
+
+    #footer svg {
+        @include size(30px, 30px);
+    }
 }
