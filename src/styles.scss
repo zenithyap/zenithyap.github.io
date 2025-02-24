@@ -102,10 +102,13 @@ h1, h2, h3, h4, h5, h6 {
 #about .experience-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: $section-gap;
+    gap: $default-gap;
     margin-bottom: $section-gap;
     margin-top: $section-gap;
+}
+
+#about h2 {
+    align-self: center;
 }
 
 #about #profilePic {

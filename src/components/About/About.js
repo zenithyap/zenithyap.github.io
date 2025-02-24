@@ -10,8 +10,8 @@ function AboutPage() {
                 <img id="profilePic" src={profilePic} alt="My Profile" />
                 <p>Hey, welcome to my website! I am a final-year Computer Science undergraduate at the National University of Singapore. I enjoy building visually engaging and dynamic web experiences using modern web technologies. Outside of coding, I am a reader, gamer, and a lifelong learner.</p>
             </div>
+            <h2>Experience</h2>
             <div className="experience-container">
-                <h2>Experience</h2>
                 <div className="title-container">
                     <img src={azendianLogo} alt="azendian logo" />
                     <div>
