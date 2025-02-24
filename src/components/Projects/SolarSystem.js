@@ -38,23 +38,23 @@ function SolarSystem() {
             <div className="planets-container">
 
                 <div className="blank"></div>
-                <div className="planet" id="mercury" onClick={() => handlePlanetClick("mercury")}></div>
+                <button type="button" className="planet" id="mercury" onClick={() => handlePlanetClick("mercury")}></button>
                 <AnimatedBox title="Design Portfolio" link="https://soarz.netlify.app" isDisplay={planetDesc.mercury} desc={designPortfolioDesc}></AnimatedBox>
 
-                <div className="planet" id="venus" onClick={() => handlePlanetClick("venus")}></div>
+                <button type="button" className="planet" id="venus" onClick={() => handlePlanetClick("venus")}></button>
                 <AnimatedBox title="Peer Prep" link="https://github.com/CS3219-AY2324S1/ay2324s1-course-assessment-g51" isDisplay={planetDesc.venus} desc={peerPrepDesc}></AnimatedBox>
                 <div className="blank"></div>
 
                 <div className="blank"></div>
-                <div className="planet" id="earth" onClick={() => handlePlanetClick("earth")}></div>
+                <button type="button" className="planet" id="earth" onClick={() => handlePlanetClick("earth")}></button>
                 <AnimatedBox title="MyLib" link="https://github.com/zenithyap/tp" isDisplay={planetDesc.earth} desc={myLibDesc}></AnimatedBox>
 
-                <div className="planet" id="mars" onClick={() => handlePlanetClick("mars")}></div>
+                <button type="button" className="planet" id="mars" onClick={() => handlePlanetClick("mars")}></button>
                 <AnimatedBox title="Pix" link="https://github.com/zenithyap/ip" isDisplay={planetDesc.mars} desc={pixDesc}></AnimatedBox>
                 <div className="blank"></div>
 
                 <div className="blank"></div>
-                <div className="planet" id="jupiter" onClick={() => handlePlanetClick("jupiter")}></div>
+                <button type="button" className="planet" id="jupiter" onClick={() => handlePlanetClick("jupiter")}></button>
                 <AnimatedBox title="Robot Dog" link="https://www.ccsgp.comp.nus.edu.sg/robotic-dog-intern" isDisplay={planetDesc.jupiter} desc={robotDogDesc}></AnimatedBox>
 
                 <div className="blank"></div>
