@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.5f05fdcf.css",
-    "main.js": "/my-portfolio/static/js/main.80e39fa8.js",
-    "static/js/488.21a3b654.chunk.js": "/my-portfolio/static/js/488.21a3b654.chunk.js",
-    "static/media/earth.png": "/my-portfolio/static/media/earth.88283fd478b13fa920f1.png",
-    "static/media/venus.png": "/my-portfolio/static/media/venus.84d5e0ebd5391bdc8028.png",
-    "static/media/mars.png": "/my-portfolio/static/media/mars.9db0489b9c8b9c62c34a.png",
-    "static/media/jupiter.png": "/my-portfolio/static/media/jupiter.401e8394dac6b9497cbc.png",
-    "static/media/saturn.png": "/my-portfolio/static/media/saturn.6c367f8b4aab05d6d9f6.png",
-    "static/media/profilePic.JPEG": "/my-portfolio/static/media/profilePic.1b8e34edccdccf9d7834.JPEG",
-    "static/media/mercury.png": "/my-portfolio/static/media/mercury.5fc675fbac8d67ba4cc8.png",
-    "static/media/full-moon.svg": "/my-portfolio/static/media/full-moon.2bfca8cb3e22472f4afe.svg",
-    "static/media/Nasalization-Regular.woff": "/my-portfolio/static/media/Nasalization-Regular.e58419de2cb1706a54bf.woff",
-    "index.html": "/my-portfolio/index.html",
-    "main.5f05fdcf.css.map": "/my-portfolio/static/css/main.5f05fdcf.css.map",
-    "main.80e39fa8.js.map": "/my-portfolio/static/js/main.80e39fa8.js.map",
-    "488.21a3b654.chunk.js.map": "/my-portfolio/static/js/488.21a3b654.chunk.js.map"
+    "main.css": "/static/css/main.3d5c2793.css",
+    "main.js": "/static/js/main.01f7d931.js",
+    "static/js/488.21a3b654.chunk.js": "/static/js/488.21a3b654.chunk.js",
+    "static/media/earth.png": "/static/media/earth.88283fd478b13fa920f1.png",
+    "static/media/venus.png": "/static/media/venus.84d5e0ebd5391bdc8028.png",
+    "static/media/mars.png": "/static/media/mars.9db0489b9c8b9c62c34a.png",
+    "static/media/jupiter.png": "/static/media/jupiter.401e8394dac6b9497cbc.png",
+    "static/media/saturn.png": "/static/media/saturn.6c367f8b4aab05d6d9f6.png",
+    "static/media/profilePic.JPEG": "/static/media/profilePic.1b8e34edccdccf9d7834.JPEG",
+    "static/media/mercury.png": "/static/media/mercury.5fc675fbac8d67ba4cc8.png",
+    "static/media/full-moon.svg": "/static/media/full-moon.2bfca8cb3e22472f4afe.svg",
+    "static/media/Nasalization-Regular.woff": "/static/media/Nasalization-Regular.e58419de2cb1706a54bf.woff",
+    "index.html": "/index.html",
+    "main.3d5c2793.css.map": "/static/css/main.3d5c2793.css.map",
+    "main.01f7d931.js.map": "/static/js/main.01f7d931.js.map",
+    "488.21a3b654.chunk.js.map": "/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f05fdcf.css",
-    "static/js/main.80e39fa8.js"
+    "static/css/main.3d5c2793.css",
+    "static/js/main.01f7d931.js"
   ]
 }
