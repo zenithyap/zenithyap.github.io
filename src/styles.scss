@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
 #footer svg {
     background-color: $dark;
     @include size(40px, 40px);
-    fill: $light;
+    fill: $lighter;
 }
 
 @media screen and (max-width: 700px) {

@@ -6,7 +6,7 @@
     height: auto;
     position: relative;
     padding: 12px;
-    color: $light;
+    color: $lighter;
 }
 
 @media screen and (max-width: 700px) {
@@ -27,8 +27,8 @@
 .animated-box .border-bottom,
 .animated-box .border-left {
     position: absolute;
-    background-color: $light;
-    box-shadow: 0 0 3px $light;
+    background-color: $lighter;
+    box-shadow: 0 0 3px $lighter;
 }
 
 .animated-box .border-top {
@@ -69,14 +69,14 @@
 }
 
 .animated-box h3 {
-    text-shadow: $light 0 0 2px;
+    text-shadow: $lighter 0 0 2px;
     font-weight: bold;
 }
 
 .animated-box a:visited,
 .animated-box a:link {
-    color: $light;
-    text-shadow: $light 0 0 2px;
+    color: $lighter;
+    text-shadow: $lighter 0 0 2px;
     text-decoration: none;
     font-weight: bold;
 }

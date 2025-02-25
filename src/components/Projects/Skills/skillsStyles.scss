@@ -47,7 +47,7 @@ $panel-num: 28;
     transform: translate(-50%, -100%) rotateY(var(--rotate)) translateZ(221px);
 
     &::before {
-        color: global.$light;
+        color: global.$lighter;
         position: absolute;
         content: "HTML CSS JavaScript React Python Git GitHub Tailwind";
         word-spacing: 30px;
